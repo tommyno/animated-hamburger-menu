@@ -1,8 +1,5 @@
-# Node and git
-node_modules
-.gitignore
-.gitattributes
-css/*.map
+# Project
+prepros.cfg
 
 # Windows image file caches
 Thumbs.db
