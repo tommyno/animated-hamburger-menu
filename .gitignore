@@ -1,5 +1,8 @@
-# Node
+# Node and git
 node_modules
+.gitignore
+.gitattributes
+css/*.map
 
 # Windows image file caches
 Thumbs.db
