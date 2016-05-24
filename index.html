@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS only hamburger menu</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <h1>CSS only hamburger menu</h1>
+    <h2>Animated and responsive</h2>
+
+    <div class="nav-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <p>Add modifier class <em>".nav-button--responsive"</em> to make it responsive</p>
+
+    <script>
+      document.querySelector(".nav-button").onclick = function () {
+        this.classList.toggle('is-open');
+      };
+    </script>
+
+</body>
+</html>

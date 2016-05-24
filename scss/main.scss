@@ -1,0 +1,107 @@
+// We got style!
+
+.nav-button {
+  $barHeight: 20%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+
+  // Add this modifier to make nav button responsive
+  &--responsive {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
+  }
+
+  span {
+    background: #222;
+    display: block;
+    width: 100%;
+    height: $barHeight;
+    position: absolute;
+    left: 0;
+    transition: all .2s linear;
+    transform: translateZ(0);
+    will-change: auto;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      margin-top: -$barHeight/2;
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      margin-top: -$barHeight/2;
+      top: 50%;
+    }
+
+    &:nth-child(4) {
+      bottom: 0;
+    }
+
+  }
+
+  &.is-open {
+
+    span {
+
+      &:nth-child(1) {
+        opacity: 0;
+        top: 50%;
+        margin-top: -$barHeight/2;
+        transform: scale(0.3);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        transition-delay: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        transition-delay: 0;
+      }
+
+      &:nth-child(4) {
+        bottom: 50%;
+        margin-top: -$barHeight/2;
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+    }
+
+  }
+
+}
+
+
+// Not needed - only for page example
+body {
+  background: #eee;
+  font-family: sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+h2 {
+  color: #444;
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-button {
+  margin: 50px auto;
+}
